@@ -1,7 +1,7 @@
-import { useState } from "react"
-import axios from "axios"
-import { useNavigate } from "react-router-dom"
-import { ToastContainer, toast } from 'react-toastify'
+import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -24,7 +24,7 @@ export default function Login() {
     async function handleSubmit(e) {
         e.preventDefault()
         try {
-          const { data } = await axios.post('/auth/login', formData)
+          const { data } = await axios.post('/api/auth/login', formData)
           toast.success('Login successful');
           const token = data.token 
           
@@ -42,14 +42,14 @@ export default function Login() {
       <div className="container">
         <form onSubmit ={handleSubmit}>
           <div className="field">
-            <label className="label">Email</label>
+            <label className="label">Username</label>
             <div className="control">
               <input
                 className="input"
                 type="text"
-                name={'email'}
+                name={'username'}
                 onChange={handleChange}
-                value={formData.email}
+                value={formData.username}
               />
             </div>
           </div>

@@ -22,6 +22,7 @@ const Navbar = () => {
         <div className="navbar-item">
           <div className="buttons">
            <Link to="/" className="button is-link is-outlined">Home</Link>
+           <Link to="/shirts/browse" className="button is-light">Browse</Link>
            {!isLoggedIn &&<Link to="/auth/signup" className="button is-light">Signup</Link>}
            {!isLoggedIn &&<Link to="/auth/login" className="button is-light">Login</Link>}
            {isLoggedIn &&<Link to="/shirts/design" className="button is-light">Design Shirt</Link>}

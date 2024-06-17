@@ -2,7 +2,7 @@ import { useState } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 
 export default function Signup() {
 
@@ -24,12 +24,12 @@ export default function Signup() {
     async function handleSubmit(e) {
         e.preventDefault()
         try {
-            await axios.post('/auth/signup', formData)
+            await axios.post('/api/auth/signup', formData)
             toast.success('Signup successful');
-            navigate('auth/login')
+            navigate('/auth/login')
             
         } catch (err) {
-            console.log(err.response.data)
+            // console.log(err.response.data)
             toast.error('Signup failed');
         }
     }
