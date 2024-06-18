@@ -10,6 +10,18 @@ export default function Browse () {
     const [shirtFilter, setShirtFilter]= useState('')
     const [selectedColor, setSelectedColor]= useState('')
 
+    const formColors = [
+        "white",
+        "black",
+        "red",
+        "green",
+        "grey",
+        "purple",
+        "pink",
+        "blue",
+        "yellow",
+      ];
+
 useEffect(()=> {
     async function fetchShirts() {
         const resp = await fetch('/api/shirts')
@@ -24,19 +36,24 @@ useEffect(()=> {
         const filteredShirts = shirts.filter(shirt => {
           const color = shirt.color.toLowerCase()
           const filterText = shirtFilter.toLowerCase()
-          return name.includes(filterText)
+          return color.includes(filterText)
             && (selectedColor === '' || shirt.color === selectedColor)
         })
         return filteredShirts
       }
     
-      function getColors() {
-        const mappedShirts= shirts.map(shirt => shirt.color)
-        console.log(mappedShirts)
-        const uniqShirts = new Set(mappedShirts)
-        const arrayShirts = Array.from(uniqShirts)
-        return arrayShirts
+      function handleReset() {
+
+
       }
+
+    //   function getColors() {
+    //     const mappedShirts= shirts.map(shirt => shirt.color)
+    //     console.log(mappedShirts)
+    //     const uniqShirts = new Set(mappedShirts)
+    //     const arrayShirts = Array.from(uniqShirts)
+    //     return arrayShirts
+    //   }
 
     
     console.log(shirts)
@@ -45,18 +62,25 @@ useEffect(()=> {
         <>
           <div className="section">
             <div className="container">
-              <input
+              <select
                 className="input"
                 placeholder="Select Color.."
                 onChange={(event) => setSelectedColor(event.target.value)}
                 value={shirtFilter}
-              />
+              >
+                  <option value="">Select Color</option>
+                  {formColors.map((color) => (
+                    <option key={color} value={color}>
+                      {color}
+                    </option>
+                  ))}
+                </select>
+                <button className="button is-danger">Reset</button>
               <h1>Take a look!</h1>
               <div className="columns is-multiline is-mobile">
                 {filterShirts().map((shirt, index) => {
-                  console.log(shirt)
                   return (
-                    <div
+                    shirt.size === "M" && <div
                       className="column is-one-third-desktop is-half-tablet is-half-mobile"
                       key={index}
                     >
@@ -68,9 +92,6 @@ useEffect(()=> {
                                 <h2 className="title is-4">
                                   {shirt.color}
                                 </h2>
-                                <p className="subtitle is-4">
-                                  {shirt.size}
-                                </p>
                               </div>
                             </div>
                           </div>
