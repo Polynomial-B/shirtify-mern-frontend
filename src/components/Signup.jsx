@@ -13,23 +13,23 @@ export default function Signup() {
         email: "",
         password: "",
         passwordConfirmation: "",
-    })
+    });
 
     function handleChange (e) {
-        const newFormData = structuredClone(formData)
-        newFormData[e.target.name] = e.target.value
-        setFormData(newFormData)
+        const newFormData = structuredClone(formData);
+        newFormData[e.target.name] = e.target.value;
+        setFormData(newFormData);
     }
 
     async function handleSubmit(e) {
-        e.preventDefault()
+        e.preventDefault();
         try {
-            await axios.post('/api/auth/signup', formData)
+            await axios.post('/api/auth/signup', formData);
             toast.success('Signup successful');
-            navigate('/auth/login')
+            navigate('/auth/login');
             
         } catch (err) {
-            // console.log(err.response.data)
+            // console.log(err.response.data);
             toast.error('Signup failed');
         }
     }

@@ -23,7 +23,7 @@ export default function Design() {
     "purple",
     "pink",
     "blue",
-    "yellow",
+    "yellow"
   ];
   const formSizes = ["S", "M", "L"];
 
@@ -33,8 +33,6 @@ export default function Design() {
   const userIdObject = JSON.parse(window.atob(token.split(".")[1]));
   const userId = userIdObject.userId;
 
-  console.log(userId);
-
   async function handleSubmit(e) {
     e.preventDefault();
     try {
@@ -43,8 +41,6 @@ export default function Design() {
       const { data } = await axios.post("/api/shirts/design", formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
-
-      console.log(data);
 
       toast.success("Shirt created and added to your wishlist!");
       navigate("/wishlist");
@@ -57,7 +53,6 @@ export default function Design() {
     const newFormData = structuredClone(formData);
     newFormData[e.target.name] = e.target.value;
     setFormData(newFormData);
-    console.log();
   }
 
   return (

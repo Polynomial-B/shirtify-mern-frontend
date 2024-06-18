@@ -47,13 +47,7 @@ useEffect(()=> {
         setSelectedColor(resetShirtColor)
       }
 
-    //   function getColors() {
-    //     const mappedShirts= shirts.map(shirt => shirt.color)
-    //     console.log(mappedShirts)
-    //     const uniqShirts = new Set(mappedShirts)
-    //     const arrayShirts = Array.from(uniqShirts)
-    //     return arrayShirts
-    //   }
+
 
     return (
         <>

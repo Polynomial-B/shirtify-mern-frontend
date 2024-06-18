@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import Browse from "./components/Browse";
 import Design from "./components/Design"
 import Wishlist from "./components/Wishlist";
+import WishItem from "./components/WishItem";
 
 function App() {
   return <>
@@ -21,6 +22,7 @@ function App() {
       <Route path="shirts/browse" element={<Browse />} />
       <Route path="shirts/design" element={<Design />} />
       <Route path="/wishlist" element={<Wishlist />} />
+      <Route path="/wishlist/:wishId" element={<WishItem />} />
     </Routes>
   </Router>
   
