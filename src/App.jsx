@@ -6,6 +6,7 @@ import { ToastContainer } from 'react-toastify'
 import Login from "./components/Login";
 import Browse from "./components/Browse";
 import Design from "./components/Design"
+import Wishlist from "./components/Wishlist";
 
 function App() {
   return <>
@@ -19,7 +20,7 @@ function App() {
       <Route path="auth/login" element={<Login />} />
       <Route path="shirts/browse" element={<Browse />} />
       <Route path="shirts/design" element={<Design />} />
-      <Route  />
+      <Route path="/wishlist" element={<Wishlist />} />
     </Routes>
   </Router>
   
