@@ -1,3 +1,6 @@
+
+
+
 const Home = () => {
     return <div className="hero is-fullheight-with-navbar">
       <div className="hero-body">
@@ -5,7 +8,7 @@ const Home = () => {
           <h1 className="subtitle mb-5">
             Design your own Tee! 
           </h1>
-          <h2 className="title">
+          <h2 className="title" id="home-page-header">
             👚Your Imagination, Your Canvas 🎨
           </h2>
         </div>
