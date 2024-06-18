@@ -27,73 +27,101 @@ export default function Design() {
   ];
   const formSizes = ["S", "M", "L"];
 
+  const token = localStorage.getItem("token");
+  console.log("token ", token);
+
+  const userIdObject = JSON.parse(window.atob(token.split(".")[1]));
+  const userId = userIdObject.userId;
+
+  console.log(userId);
+
   async function handleSubmit(e) {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
-    //   const userID = JSON.parse(window.atob(token.split(".")[1]));
-    //   console.log(userID[1]);
-    
-      const { data } = await axios.post("/api/shirts", formData, {
+
+      const { data } = await axios.post("/api/shirts/design", formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
+
+      console.log(data);
+
       toast.success("Shirt created and added to your wishlist!");
       navigate("/wishlist");
     } catch (err) {
       toast.error("Sorry, we have encountered an error!");
     }
   }
+
   function handleChange(e) {
     const newFormData = structuredClone(formData);
     newFormData[e.target.name] = e.target.value;
     setFormData(newFormData);
+    console.log();
   }
-  return (
-    <div className="section">
-      <div className="container">
-        <form onSubmit={handleSubmit}>
-          <div className="field">
-            <label className="label">Color</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                name="color"
-                onChange={handleChange}
-                value={formData.color}
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Select Image</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                name="frontDesign"
-                onChange={handleChange}
-                value={formData.frontDesign}
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Size</label>
-            <div className="control">
-              <input
-                className="input"
-                type="button"
-                name="size"
-                onChange={handleChange}
-                value={formData.size}
-              />
-            </div>
-          </div>
 
-          <button className="button" type="submit">
-            Create Shirt
-          </button>
-        </form>
+  return (
+    <>
+      <div className="section">
+        <div className="container">
+          <form onSubmit={handleSubmit}>
+            <div className="field">
+              <label className="label">Color</label>
+              <div className="control">
+                <select
+                  className="input"
+                  type="text"
+                  name="color"
+                  onChange={handleChange}
+                  value={formData.color}
+                >
+                  <option value="">Select Color</option>
+                  {formColors.map((color) => (
+                    <option key={color} value={color}>
+                      {color}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <div className="field">
+              <label className="label">Select Size</label>
+              <div className="control">
+                <select
+                  className="input"
+                  type="text"
+                  name="size"
+                  onChange={handleChange}
+                  value={formData.size}
+                >
+                  <option value="">Select Size</option>
+                  {formSizes.map((size) => (
+                    <option key={size} value={size}>
+                      {size}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <div className="field">
+              <label className="label">Design</label>
+              <div className="control">
+                <input
+                  className="input"
+                  type="text"
+                  name="frontDesign"
+                  onChange={handleChange}
+                  value={formData.frontDesign}
+                />
+              </div>
+            </div>
+
+            <button className="button" type="submit">
+              Create Shirt
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
