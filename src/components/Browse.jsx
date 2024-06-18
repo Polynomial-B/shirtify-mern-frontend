@@ -43,8 +43,8 @@ useEffect(()=> {
       }
     
       function handleReset() {
-
-
+        const resetShirtColor = ""
+        setSelectedColor(resetShirtColor)
       }
 
     //   function getColors() {
@@ -54,9 +54,6 @@ useEffect(()=> {
     //     const arrayShirts = Array.from(uniqShirts)
     //     return arrayShirts
     //   }
-
-    
-    console.log(shirts)
 
     return (
         <>
@@ -75,7 +72,7 @@ useEffect(()=> {
                     </option>
                   ))}
                 </select>
-                <button className="button is-danger">Reset</button>
+                <button className="button is-danger" onClick={handleReset}>Reset</button>
               <h1>Take a look!</h1>
               <div className="columns is-multiline is-mobile">
                 {filterShirts().map((shirt, index) => {
