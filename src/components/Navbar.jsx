@@ -16,6 +16,8 @@ const Navbar = () => {
       localStorage.removeItem('token')
     }
 
+  
+
     return <nav className="navbar">
     <div className="navbar-menu is-active">
       <div className="navbar-end">
