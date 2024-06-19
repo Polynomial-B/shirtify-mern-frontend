@@ -1,7 +1,8 @@
 .button.is-danger {
     padding: 10px 10px;
 }
-.controls {
+
+/* .controls {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,18 +14,18 @@
     justify-content: center;
 }
 .column {
-    flex: 0 0 33.3333%; /* Adjust as needed for responsive design */
-    max-width: 33.3333%; /* Adjust as needed for responsive design */
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
     box-sizing: border-box;
     padding: 10px;
-}
+} */
 .card {
     border: 1px solid color gray;
     border-radius: 8px;
     overflow: hidden;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    align-items: center; */
+    align-items: center;
     position:relative;
     transform: transform 0.3s ease;
 }
@@ -51,10 +52,10 @@
     max-width: 1200px;
     margin: 0 auto;
 }
-.input {
+/* .input {
     padding: 10px;
     margin-right: 10px;
-}
+} */
 .card-content {
     padding: 20px;
 }

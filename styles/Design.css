@@ -1,6 +1,9 @@
 .t-shirt-container {
     min-height: 50vh;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .image-overlay-container {
