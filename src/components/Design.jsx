@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import '../../styles/design.css'
+import '../../styles/Design.css'
 
 
 export default function Design() {
