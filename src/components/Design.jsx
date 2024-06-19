@@ -67,6 +67,9 @@ export default function Design() {
     <div className="columns">
     <div className="column is-half">
     <div className="container t-shirt-container" id={formData.color}>
+    <div className="container image-overlay-container">
+    <img src="../assets/maple-leaf.png"/>
+    </div>
     </div>
     </div>
     <div className="column is-half">

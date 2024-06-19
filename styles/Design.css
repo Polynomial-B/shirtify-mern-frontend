@@ -1,7 +1,24 @@
-
 .t-shirt-container {
-    border-radius: 10px;
     min-height: 50vh;
+    position: relative;
+}
+
+.image-overlay-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-overlay-container img {
+    width: 20vh;
+    height: auto;
+    display: block;
+    min-height: 0;
+
 }
 
 #white {
@@ -23,7 +40,12 @@
     background-color: rgb(127, 0, 155);
 }
 #pink {
-    background-color: rgb(255, 0, 217);
+    background-image: url('../assets/t-shirt.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0;
+    position: relative;
 }
 #blue {
     background-color: blue;
@@ -31,3 +53,4 @@
 #yellow {
     background-color: rgb(255, 234, 0);
 }
+
