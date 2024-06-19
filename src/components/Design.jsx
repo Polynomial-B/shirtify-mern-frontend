@@ -29,14 +29,7 @@ export default function Design() {
   ];
   const formSizes = ["S", "M", "L"];
 
-  
-  // ! WHAT IS THIS FOR ?????
-  
-//   const token = localStorage.getItem("token");
-//   const userIdObject = JSON.parse(window.atob(token.split(".")[1]));
-//   const userId = userIdObject.userId;
-
-  
+    
   async function handleSubmit(e) {
     e.preventDefault();
     try {

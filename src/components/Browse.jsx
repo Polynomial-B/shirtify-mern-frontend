@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-
-
+import '../../styles/Browse.css'
+import { toast } from 'react-toastify'
 
 
 
@@ -46,19 +46,35 @@ useEffect(()=> {
         const resetShirtColor = ""
         setSelectedColor(resetShirtColor)
       }
+// jazz work on this part
+      async function handleAddToWishlist () {
+        try {
+          const token = localStorage.getItem("token");
+    
+          const { data } = await axios.post("/api/shirts/design", formData, {
+            headers: { Authorization: `Bearer ${token}` },
+            
+          });
+          toast.success("Added To Wishlist!")
+        } catch{ 
+          toast.error("Shirt Not Added")
+ 
+          }
+      }
 
 
-
-    return (
+      return (
         <>
           <div className="section">
             <div className="container">
-              <select
-                className="input"
-                placeholder="Select Color.."
-                onChange={(event) => setSelectedColor(event.target.value)}
-                value={shirtFilter}
-              >
+              <h1 className="title">Discover Your Look</h1>
+              <div className="controls">
+                <select
+                  className="input"
+                  placeholder="Select Color.."
+                  onChange={(event) => setSelectedColor(event.target.value)}
+                  value={shirtFilter}
+                >
                   <option value="">Select Color</option>
                   {formColors.map((color) => (
                     <option key={color} value={color}>
@@ -67,7 +83,7 @@ useEffect(()=> {
                   ))}
                 </select>
                 <button className="button is-danger" onClick={handleReset}>Reset</button>
-              <h1>Take a look!</h1>
+              </div>
               <div className="columns is-multiline is-mobile">
                 {filterShirts().map((shirt, index) => {
                   return (
@@ -75,14 +91,12 @@ useEffect(()=> {
                       className="column is-one-third-desktop is-half-tablet is-half-mobile"
                       key={index}
                     >
-                      <Link to={`/api/shirts/${shirt._id}`}>
-                        <div className="card">
+                     
+                        <div onClick={handleAddToWishlist} className="card">
                           <div className="card-content">
                             <div className="media">
                               <div className="media-content">
-                                <h2 className="title is-4">
-                                  {shirt.color}
-                                </h2>
+                                <h2 className="title is-4">{shirt.color}</h2>
                               </div>
                             </div>
                           </div>
@@ -92,7 +106,6 @@ useEffect(()=> {
                             </figure>
                           </div>
                         </div>
-                      </Link>
                     </div>
                   )
                 })}
@@ -100,5 +113,5 @@ useEffect(()=> {
             </div>
           </div>
         </>
-      )
+      );
     }
