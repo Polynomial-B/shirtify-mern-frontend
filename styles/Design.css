@@ -1,4 +1,9 @@
 
+.t-shirt-container {
+    border-radius: 10px;
+    min-height: 50vh;
+}
+
 #white {
     background-color: blue;
 }
