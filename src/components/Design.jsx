@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import '../../styles/design.css'
+
 
 export default function Design() {
   const navigate = useNavigate();
@@ -27,12 +29,14 @@ export default function Design() {
   ];
   const formSizes = ["S", "M", "L"];
 
-  const token = localStorage.getItem("token");
-  console.log("token ", token);
+  
+  // ! WHAT IS THIS FOR ?????
+  
+//   const token = localStorage.getItem("token");
+//   const userIdObject = JSON.parse(window.atob(token.split(".")[1]));
+//   const userId = userIdObject.userId;
 
-  const userIdObject = JSON.parse(window.atob(token.split(".")[1]));
-  const userId = userIdObject.userId;
-
+  
   async function handleSubmit(e) {
     e.preventDefault();
     try {
@@ -53,10 +57,16 @@ export default function Design() {
     const newFormData = structuredClone(formData);
     newFormData[e.target.name] = e.target.value;
     setFormData(newFormData);
+    const colorToChange = formData.color
+    setColor(colorToChange)
   }
 
   return (
     <>
+    <div className="section container" id={formData.color}>
+    {console.log(formData.color)}
+    {formData.color}
+    </div>
       <div className="section">
         <div className="container">
           <form onSubmit={handleSubmit}>

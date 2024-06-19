@@ -5,21 +5,27 @@ import { toast } from "react-toastify";
 import Wishlist from "./Wishlist";
 
 export default function WishItem() {
-    const { id } = useParams();
+    const { wishId } = useParams();
     const navigate= useNavigate();
-    const [shirt, setshirt]= useState(null);
+    const [shirt, setShirt]= useState(null);
     const [color, setColor]= useState('')
     const [frontDesign, setFrontDesign] =useState('');
     const [size, setSize] = useState('')
+
+
+
+
+
+
 
 useEffect(()=> {
     async function fetchShirt() {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get(`/api/shirts/${id}`, {
+            const response = await axios.get(`/api/wishlist/${wishId}`, {
               headers: { Authorization: `Bearer ${token}` }
             });
-            setshirt(response.data);
+            setShirt(response.data);
             setColor(response.data.color);
             setFrontDesign(response.data.frontDesign);
             setSize(response.data.size);
@@ -28,12 +34,14 @@ useEffect(()=> {
           }
         }
         fetchShirt();
-      }, [id]);
+      }, [wishId]);
+
+
 
 const handleDelete = async () => {
     try {
         const token =localStorage.getItem('token');
-        await axios.delete(`/api/shirts/${id}`, {
+        await axios.delete(`/api/shirts/${wishId}`, {
             headers: { Authorization: `Bearer ${token}` }
           });
           toast.success('Shirt deleted sucessfully');
@@ -43,13 +51,13 @@ const handleDelete = async () => {
         }
 }
 
-
+console.log("Hello");
 
 const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`/api/shirts/${id}`, { color, frontDesign, size }, {
+      await axios.put(`/api/shirts/${wishId}`, { color, frontDesign, size }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       toast.success('Shirt updated successfully');

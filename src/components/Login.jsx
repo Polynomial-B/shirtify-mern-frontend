@@ -25,7 +25,7 @@ export default function Login() {
         e.preventDefault()
         try {
           const { data } = await axios.post('/api/auth/login', formData)
-          toast.success('Login successful');
+          toast.success(`Welcome, ${formData.username}`);
           const token = data.token 
           
           localStorage.setItem('token', token)

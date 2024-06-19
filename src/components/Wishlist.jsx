@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 
@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 export default function Wishlist() {
 
 const [wishlist, setWishlist] = useState([]);
+
 
 useEffect(() => {
     async function fetchWishlist() {
@@ -24,8 +25,6 @@ useEffect(() => {
     fetchWishlist();
   }, []);
 
-
-console.log("wishlist = ", wishlist)
     
     //   function getColors() {
     //     const mappedShirts= shirts.map(shirt => shirt.color)
@@ -38,6 +37,7 @@ console.log("wishlist = ", wishlist)
 return <>
         <h1>Wishlist Page</h1>
 
+        <div className="section">
         <div className="columns is-multiline is-mobile">
                 {wishlist.map((wish, index) => {
                   return (
@@ -45,7 +45,7 @@ return <>
                       className="column is-one-third-desktop is-half-tablet is-half-mobile"
                       key={index}
                     >
-                      <Link to={`/api/wishlist/${wish._id}`}>
+                      <Link to={`/wishlist/${wish._id}`}>
                         <div className="card">
                           <div className="card-content">
                             <div className="media">
@@ -66,6 +66,7 @@ return <>
                     </div>
                   )
                 })}
+                </div>
                 </div>
 </>
 
