@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import '../../styles/design.css'
+import '../../styles/Design.css'
 
 
 export default function Design() {
@@ -63,10 +63,13 @@ export default function Design() {
 
   return (
     <>
-    <div className="section container" id={formData.color}>
-    {console.log(formData.color)}
-    {formData.color}
+    <div className="section">
+    <div className="columns">
+    <div className="column is-half">
+    <div className="container t-shirt-container" id={formData.color}>
     </div>
+    </div>
+    <div className="column is-half">
       <div className="section">
         <div className="container">
           <form onSubmit={handleSubmit}>
@@ -126,6 +129,9 @@ export default function Design() {
             </button>
           </form>
         </div>
+        </div>
+        </div>
+      </div>
       </div>
     </>
   );
