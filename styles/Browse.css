@@ -1,24 +1,21 @@
-.button.is-danger {
-    padding: 10px 10px;
-}
 
-/* .controls {
+.controls {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
 }
-.columns {
+.browse-columns {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.column {
-    flex: 0 0 33.3333%;
-    max-width: 33.3333%;
+.browse-column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
     box-sizing: border-box;
     padding: 10px;
-} */
+}
 .card {
     border: 1px solid color gray;
     border-radius: 8px;
@@ -52,14 +49,10 @@
     max-width: 1200px;
     margin: 0 auto;
 }
-/* .input {
-    padding: 10px;
-    margin-right: 10px;
-} */
 .card-content {
     padding: 20px;
 }
-.card:hoover,
+.card:hover,
 .card.selected {
     transform: scale(1.05);
 }

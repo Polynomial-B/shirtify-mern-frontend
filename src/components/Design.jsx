@@ -14,7 +14,6 @@ export default function Design() {
   });
 
   const [color, setColor] = useState("");
-  const [frontDesign, setFrontDesign] = useState("");
 
   const formColors = [
     "white",
@@ -61,7 +60,7 @@ export default function Design() {
     <div className="column is-half">
     <div className="container t-shirt-container" id={formData.color}>
     <div className="container image-overlay-container">
-    <img src="../assets/maple-leaf.png"/>
+    <img src={formData.frontDesign}/>
     </div>
     </div>
     </div>
