@@ -60,7 +60,6 @@ const handleDelete = async () => {
 const token = localStorage.getItem("token");
 
 const user = JSON.parse(window.atob(token.split(".")[1]));
-console.log(user.userId);
 
 
 

@@ -30,7 +30,6 @@ export default function Login() {
       localStorage.setItem('token', token);
       navigate('/shirts/browse');
     } catch (err) {
-      console.log(err.response.data);
       toast.error('Login failed');
     }
   }

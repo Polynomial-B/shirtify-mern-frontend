@@ -32,7 +32,6 @@ export default function Signup() {
             navigate('/auth/login');
             
         } catch (err) {
-            // console.log(err.response.data);
             toast.error('Signup failed');
         }
     }

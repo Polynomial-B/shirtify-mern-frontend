@@ -57,7 +57,7 @@ useEffect(()=> {
           headers: { Authorization: `Bearer ${token}` },
             
           });
-          console.log("Data == ", data);
+       
           toast.success("Added To Wishlist!")
         } catch{ 
           toast.error("Shirt Not Added")
