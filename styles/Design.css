@@ -21,39 +21,45 @@
     height: auto;
     display: block;
     min-height: 0;
+    opacity: .8;}
 
+
+
+#White, #Black, #Red, #Green, #Purple, #Pink, #Blue, #Yellow, #Grey {
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;
+z-index: 0;
+position: relative;
 }
 
-#white {
-    background-color: blue;
+#White {
+    background-image: url('../assets/white-t-shirt.png');
 }
-#black {
-    background-color: rgb(16, 16, 18);
+#Black {
+    background-image: url('../assets/black-t-shirt.png');
+    background-color: rgba(152, 152, 152, 0.322);
+    border-radius: 10px;
 }
-#red {
-    background-color: rgb(152, 0, 0);
+#Red {
+    background-image: url('../assets/red-t-shirt.png');
 }
-#green {
-    background-color: rgb(0, 149, 20);
+#Green {
+    background-image: url('../assets/green-t-shirt.png');
 }
-#grey {
-    background-color: rgb(114, 114, 114);
+#Grey {
+    background-image: url('../assets/grey-t-shirt.png');
 }
-#purple {
-    background-color: rgb(127, 0, 155);
+#Purple {
+    background-image: url('../assets/purple-t-shirt.png');
 }
-#pink {
-    background-image: url('../assets/t-shirt.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    z-index: 0;
-    position: relative;
+#Pink {
+    background-image: url('../assets/pink-t-shirt.png');
 }
-#blue {
-    background-color: blue;
+#Blue {
+    background-image: url('../assets/blue-t-shirt.png');
 }
-#yellow {
-    background-color: rgb(255, 234, 0);
+#Yellow {
+    background-image: url('../assets/yellow-t-shirt.png');
 }
 

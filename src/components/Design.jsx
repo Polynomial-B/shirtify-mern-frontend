@@ -8,24 +8,23 @@ import '../../styles/Design.css'
 export default function Design() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    color: "",
+    color: "White",
     size: "",
     frontDesign: "",
   });
 
   const [color, setColor] = useState("");
-  const [frontDesign, setFrontDesign] = useState("");
 
   const formColors = [
-    "white",
-    "black",
-    "red",
-    "green",
-    "grey",
-    "purple",
-    "pink",
-    "blue",
-    "yellow"
+    "White",
+    "Black",
+    "Red",
+    "Green",
+    "Grey",
+    "Purple",
+    "Pink",
+    "Blue",
+    "Yellow"
   ];
   const formSizes = ["S", "M", "L"];
 
@@ -61,7 +60,7 @@ export default function Design() {
     <div className="column is-half">
     <div className="container t-shirt-container" id={formData.color}>
     <div className="container image-overlay-container">
-    <img src="../assets/maple-leaf.png"/>
+    <img src={formData.frontDesign}/>
     </div>
     </div>
     </div>

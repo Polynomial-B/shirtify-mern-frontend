@@ -83,11 +83,11 @@ useEffect(()=> {
                 </select>
                 <button className="button is-danger" onClick={handleReset}>Reset</button>
               </div>
-              <div className="columns is-multiline is-mobile">
+              <div className="browse-columns columns is-multiline is-mobile">
                 {filterShirts().map((shirt, index) => {
                   return (
                     shirt.size === "M" && <div
-                      className="column is-one-third-desktop is-half-tablet is-half-mobile"
+                      className="browse-column column is-one-third-desktop is-half-tablet is-half-mobile"
                       key={index}
                     >
                      
