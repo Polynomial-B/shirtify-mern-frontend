@@ -3,6 +3,7 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify'
+import '../../styles/Signup.css'
 
 export default function Signup() {
 
@@ -14,6 +15,8 @@ export default function Signup() {
         password: "",
         passwordConfirmation: "",
     });
+
+  
 
     function handleChange (e) {
         const newFormData = structuredClone(formData);
@@ -33,62 +36,66 @@ export default function Signup() {
             toast.error('Signup failed');
         }
     }
-
-    return <div className="section">
-    <div className="container">
-      <form onSubmit ={handleSubmit}>
-        <div className="field">
-          <label className="label">Username</label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              name={'username'}
-              onChange={handleChange}
-              value={formData.username}
-            />
+    return (
+      <div className="signup-section section" id="signup-section">
+          <div className="container" id="signup-container">
+              <form onSubmit={handleSubmit} id="signup-form">
+                  <div className="field" id="username-field">
+                      <label className="label" htmlFor="username" id="username-label">Username</label>
+                      <div className="control" id="username-control">
+                          <input
+                              className="input"
+                              type="text"
+                              name="username"
+                              id="username-input"
+                              onChange={handleChange}
+                              value={formData.username}
+                          />
+                      </div>
+                  </div>
+                  <div className="field" id="email-field">
+                      <label className="label" htmlFor="email" id="email-label">Email</label>
+                      <div className="control" id="email-control">
+                          <input
+                              className="input"
+                              type="text"
+                              name="email"
+                              id="email-input"
+                              onChange={handleChange}
+                              value={formData.email}
+                          />
+                      </div>
+                  </div>
+                  <div className="field" id="password-field">
+                      <label className="label" htmlFor="password" id="password-label">Password</label>
+                      <div className="control" id="password-control">
+                          <input
+                              className="input"
+                              type="password"
+                              name="password"
+                              id="password-input"
+                              onChange={handleChange}
+                              value={formData.password}
+                          />
+                      </div>
+                  </div>
+                  <div className="field" id="passwordConfirmation-field">
+                      <label className="label" htmlFor="passwordConfirmation" id="passwordConfirmation-label">Confirm password</label>
+                      <div className="control" id="passwordConfirmation-control">
+                          <input
+                              className="input"
+                              type="password"
+                              name="passwordConfirmation"
+                              id="passwordConfirmation-input"
+                              onChange={handleChange}
+                              value={formData.passwordConfirmation}
+                          />
+                      </div>
+                  </div>
+                  <button className="button" type="submit" id="submit-button">Submit</button>
+              </form>
           </div>
-        </div>
-        <div className="field">
-          <label className="label">Email</label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              name={'email'}
-              onChange={handleChange}
-              value={formData.email}
-            />
-          </div>
-        </div>
-        <div className="field">
-          <label className="label">Password</label>
-          <div className="control">
-            <input
-              className="input"
-              type="password"
-              name={'password'}
-              onChange={handleChange}
-              value={formData.password}
-            />
-          </div>
-        </div>
-        <div className="field">
-          <label className="label">Confirm password</label>
-          <div className="control">
-            <input
-              className="input"
-              type="password"
-              name={'passwordConfirmation'}
-              onChange={handleChange}
-              value={formData.passwordConfirmation}
-            />
-          </div>
-        </div>
-        <button className="button">Submit</button>
-      </form>
-    </div>
-  </div>
+          
+      </div>
+  );
 }
-
-
