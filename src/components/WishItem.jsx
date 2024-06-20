@@ -35,6 +35,7 @@ export default function WishItem() {
 
   const handleDelete = async () => {
     try {
+<<<<<<< HEAD
       const token = localStorage.getItem('token');
       await axios.delete(`/api/shirts/${wishId}`, {
         headers: { Authorization: `Bearer ${token}` }
@@ -45,6 +46,18 @@ export default function WishItem() {
       toast.error('Error deleting Shirt');
     }
   }
+=======
+        const token =localStorage.getItem('token');
+        await axios.delete(`/api/wishlist/${wishId}`, {
+            headers: { Authorization: `Bearer ${token}` }
+          });
+          toast.success('Shirt deleted sucessfully');
+          navigate('/wishlist');
+        } catch {
+            toast.error('Error deleting Shirt');
+        }
+}
+>>>>>>> ecbdf88907db255dcbd884e170dd9419f842f43d
 
   console.log("Hello");
 

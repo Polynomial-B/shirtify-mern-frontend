@@ -13,7 +13,8 @@ function App() {
   return <>
 
   <Router>
-  <ToastContainer/>
+  <ToastContainer
+  autoClose={1300}/>
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />

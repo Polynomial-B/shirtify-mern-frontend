@@ -1,11 +1,12 @@
 .t-shirt-container {
-    min-height: 50vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    object-fit: contain;
-    pointer-events: none;
+    max-width: 100%; /* Ensure the container does not exceed its parent's width */
+    height: auto; /* Allow the container height to adjust dynamically */
+    object-fit: contain; /* Ensure t-shirt image fits within the container */
+    pointer-events: none; /* Prevent overlay from affecting mouse events */
 }
 
 .image-overlay-container {
