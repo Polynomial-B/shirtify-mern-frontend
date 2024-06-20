@@ -47,7 +47,7 @@ useEffect(()=> {
 const handleDelete = async () => {
     try {
         const token =localStorage.getItem('token');
-        await axios.delete(`/api/shirts/${wishId}`, {
+        await axios.delete(`/api/wishlist/${wishId}`, {
             headers: { Authorization: `Bearer ${token}` }
           });
           toast.success('Shirt deleted sucessfully');
