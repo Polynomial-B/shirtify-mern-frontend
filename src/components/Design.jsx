@@ -9,7 +9,7 @@ export default function Design() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     color: "White",
-    size: "",
+    size: "M",
     frontDesign: "",
   });
 

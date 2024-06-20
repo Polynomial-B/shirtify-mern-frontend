@@ -97,16 +97,13 @@ useEffect(()=> {
                      
                         <div className="card">
                           <div className="card-content">
-                            <div className="media">
-                              <div className="media-content">
-                                <h2 className="title is-4">{shirt.color}</h2>
+                          <div className="card-image">
+                            <div className="container t-shirt-container" id={shirt.color}>
+                            <div className="container image-overlay-container">
+                              <img src={shirt.frontDesign} alt={`picture of ${shirt.color} shirt`} />
                               </div>
                             </div>
                           </div>
-                          <div className="card-image">
-                            <figure className="image is-4by3">
-                              <img src={shirt.frontDesign} alt={`picture of ${shirt.color} shirt`} />
-                            </figure>
                           </div>
                         </div>
                     </div>
