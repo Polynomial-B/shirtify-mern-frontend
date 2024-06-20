@@ -12,6 +12,18 @@ export default function WishItem() {
     const [frontDesign, setFrontDesign] =useState('');
     const [size, setSize] = useState('')
 
+    const formColors = [
+      "White",
+      "Black",
+      "Red",
+      "Green",
+      "Grey",
+      "Purple",
+      "Pink",
+      "Blue",
+      "Yellow"
+    ];
+
 useEffect(()=> {
     async function fetchShirt() {
         try {
@@ -45,10 +57,16 @@ const handleDelete = async () => {
         }
 }
 
-console.log("Hello");
+const token = localStorage.getItem("token");
+
+const user = JSON.parse(window.atob(token.split(".")[1]));
+console.log(user.userId);
+
+
 
 const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const token = localStorage.getItem('token');
       await axios.put(`/api/shirts/${wishId}`, { color, frontDesign, size }, {
@@ -69,16 +87,23 @@ const handleSubmit = async (e) => {
     return (
         <>
           <h1>Edit Shirt</h1>
-          <form onSubmit={handleSubmit}>
+          <form>
             <div className="field">
               <label className="label">Color</label>
               <div className="control">
-                <input 
+                <select
                   className="input" 
                   type="text" 
                   value={color} 
                   onChange={(e) => setColor(e.target.value)} 
-                />
+                >
+                <option value="">Select Color</option>
+                  {formColors.map((color) => (
+                    <option key={color} value={color}>
+                      {color}
+                    </option>
+                  ))}
+                  </select>
               </div>
             </div>
             <div className="field">
@@ -105,7 +130,7 @@ const handleSubmit = async (e) => {
             </div>
             <div className="field is-grouped">
               <div className="control">
-                <button className="button is-link" type="submit">Save</button>
+                <button onClick={handleSubmit} className="button is-link" type="submit">Save</button>
               </div>
               <div className="control">
                 <button 
