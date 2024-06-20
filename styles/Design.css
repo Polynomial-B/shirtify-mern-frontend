@@ -67,4 +67,9 @@ position: relative;
 #Yellow {
     background-image: url('../assets/yellow-t-shirt.png');
 }
+#editShirtForm {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
 

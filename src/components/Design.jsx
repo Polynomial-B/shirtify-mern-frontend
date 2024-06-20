@@ -96,7 +96,6 @@ export default function Design() {
                   name="size"
                   onChange={handleChange}
                   value={formData.size}
-                  // required
                 >
                   <option value="">Select Size</option>
                   {formSizes.map((size) => (

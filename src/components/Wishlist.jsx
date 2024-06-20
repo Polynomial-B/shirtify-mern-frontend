@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import '../../styles/Wishlist.css'
-import '../../styles/Design.css'
+
 
 export default function Wishlist() {
   const [wishlist, setWishlist] = useState([]);
