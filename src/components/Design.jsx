@@ -96,6 +96,7 @@ export default function Design() {
                   name="size"
                   onChange={handleChange}
                   value={formData.size}
+                  // required
                 >
                   <option value="">Select Size</option>
                   {formSizes.map((size) => (
@@ -107,7 +108,7 @@ export default function Design() {
               </div>
             </div>
             <div className="field">
-              <label className="label">Design</label>
+              <label className="label">Add URL for your design below:</label>
               <div className="control">
                 <input
                   className="input"
@@ -115,6 +116,7 @@ export default function Design() {
                   name="frontDesign"
                   onChange={handleChange}
                   value={formData.frontDesign}
+                  
                 />
               </div>
             </div>

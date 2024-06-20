@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import '../../styles/Browse.css'
 import { toast } from 'react-toastify'
+import axios from 'axios'
 
 
 
@@ -11,16 +12,16 @@ export default function Browse () {
     const [selectedColor, setSelectedColor]= useState('')
 
     const formColors = [
-        "white",
-        "black",
-        "red",
-        "green",
-        "grey",
-        "purple",
-        "pink",
-        "blue",
-        "yellow",
-      ];
+      "White",
+      "Black",
+      "Red",
+      "Green",
+      "Grey",
+      "Purple",
+      "Pink",
+      "Blue",
+      "Yellow"
+    ];
 
 useEffect(()=> {
     async function fetchShirts() {
@@ -46,22 +47,24 @@ useEffect(()=> {
         const resetShirtColor = ""
         setSelectedColor(resetShirtColor)
       }
-// jazz work on this part
-      async function handleAddToWishlist () {
+
+      async function handleAddToWishlist(shirt) {
         try {
+          console.log(shirt)
           const token = localStorage.getItem("token");
     
-          const { data } = await axios.post("/api/shirts/design", formData, { shirtId: shirts.id}, {
+          const { data } = await axios.post("/api/shirts/browse", { shirt }, {
           headers: { Authorization: `Bearer ${token}` },
             
           });
+          console.log("Data == ", data);
           toast.success("Added To Wishlist!")
         } catch{ 
           toast.error("Shirt Not Added")
  
           }
       }
-    
+      
       return (
         <>
           <div className="section">
@@ -86,12 +89,13 @@ useEffect(()=> {
               <div className="browse-columns columns is-multiline is-mobile">
                 {filterShirts().map((shirt, index) => {
                   return (
-                    shirt.size === "M" && <div
+                    <div
+                      onClick={()=> handleAddToWishlist(shirt)}
                       className="browse-column column is-one-third-desktop is-half-tablet is-half-mobile"
                       key={index}
                     >
                      
-                        <div onClick={handleAddToWishlist} className="card">
+                        <div className="card">
                           <div className="card-content">
                             <div className="media">
                               <div className="media-content">
