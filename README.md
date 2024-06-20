@@ -30,6 +30,18 @@ insert pic here
 4. Shirt Customization: Insert designs and select sizes for shirts.
 5. Community Sharing: Save customized shirts to the browse collection for others to discover.
 
+******insert pics  here*****
+
+******Login page
+
+
+******Sign in page
+
+
+******Design a shirt page
+
+
+Edit a shirt 
 
 ## Challenges and Solutions
 * Challenge: Formulating the logic to manage the complex interactions and data flow between user wishlists and the browse collection.
@@ -39,6 +51,8 @@ to handle specific routes and middleware for secure routes and token-based authe
 ## Group Project Experience
 This was a group pair project that went well. Communication was essential, as well as delegating tasks to each other.
 We helped each other debug the code and fix any issues that arose.
+
+*******insert pic here of trello 
 
 # Technology Included
 
@@ -106,6 +120,8 @@ export default App
 ```
 
 ##Backend Seed.js
+
+
 ```
 import Shirt from "../models/shirt.js";
 import User from "../models/user.js";
