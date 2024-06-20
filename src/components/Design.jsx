@@ -8,7 +8,7 @@ import '../../styles/Design.css'
 export default function Design() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    color: "",
+    color: "White",
     size: "",
     frontDesign: "",
   });
@@ -16,15 +16,15 @@ export default function Design() {
   const [color, setColor] = useState("");
 
   const formColors = [
-    "white",
-    "black",
-    "red",
-    "green",
-    "grey",
-    "purple",
-    "pink",
-    "blue",
-    "yellow"
+    "White",
+    "Black",
+    "Red",
+    "Green",
+    "Grey",
+    "Purple",
+    "Pink",
+    "Blue",
+    "Yellow"
   ];
   const formSizes = ["S", "M", "L"];
 
