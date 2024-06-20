@@ -11,7 +11,7 @@ Customized shirts can be shared in the browse collection, allowing other users t
 
 ## Link to Shirtify
 
-insert here
+****insert here****
 
 ## Inspiration
 
@@ -21,7 +21,8 @@ The goal was to develop an engaging platform where users can express their uniqu
 
 ## Planning Process
 
-insert pic here
+****insert pic here***
+****of exclidraw***
 
 ## Features
 1. User Authentication: Secure sign-up, login, and profile management.
@@ -32,16 +33,16 @@ insert pic here
 
 ******insert pics  here*****
 
-******Login page
+******Login page*****
 
 
-******Sign in page
+******Sign in page*****
 
 
-******Design a shirt page
+******Design a shirt page*****
 
 
-Edit a shirt 
+*****Edit a shirt*****
 
 ## Challenges and Solutions
 * Challenge: Formulating the logic to manage the complex interactions and data flow between user wishlists and the browse collection.
@@ -52,7 +53,7 @@ to handle specific routes and middleware for secure routes and token-based authe
 This was a group pair project that went well. Communication was essential, as well as delegating tasks to each other.
 We helped each other debug the code and fix any issues that arose.
 
-*******insert pic here of trello 
+*******insert pic here of trello******
 
 # Technology Included
 
@@ -186,5 +187,5 @@ async function seed() {
   }
 
 ```
-
+# Deployment
 
