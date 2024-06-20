@@ -51,8 +51,8 @@ useEffect(()=> {
         try {
           const token = localStorage.getItem("token");
     
-          const { data } = await axios.post("/api/shirts/design", formData, {
-            headers: { Authorization: `Bearer ${token}` },
+          const { data } = await axios.post("/api/shirts/design", formData, { shirtId: shirts.id}, {
+          headers: { Authorization: `Bearer ${token}` },
             
           });
           toast.success("Added To Wishlist!")
@@ -61,8 +61,7 @@ useEffect(()=> {
  
           }
       }
-
-
+    
       return (
         <>
           <div className="section">

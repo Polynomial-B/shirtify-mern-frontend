@@ -25,14 +25,6 @@ useEffect(() => {
     fetchWishlist();
   }, []);
 
-    
-    //   function getColors() {
-    //     const mappedShirts= shirts.map(shirt => shirt.color)
-    //     console.log(mappedShirts)
-    //     const uniqShirts = new Set(mappedShirts)
-    //     const arrayShirts = Array.from(uniqShirts)
-    //     return arrayShirts
-    //   }
 
 return <>
         <h1>Wishlist Page</h1>

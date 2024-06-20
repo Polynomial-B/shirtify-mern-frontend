@@ -5,6 +5,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    animation: fade-in 2s ease-in-out;
+}
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .hero.is-fullheight-with-navbar {
@@ -23,7 +28,14 @@
     padding-top: 5 rem;
     position: relative;
     z-index: 1;
+    animation: slide-in 1.5s ease-out;
 }
+
+@keyframes slide-in {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
 
 .navbar {
     background: rgba (255, 255, 255, 0.8);
@@ -31,9 +43,15 @@
     padding: 10px;
     position: relative;
     z-index: 2;
-    ;
+    animation: pulse 2s 2;
 }
 
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+    
 .subtitle.mb-5, .title {
     color: rgb(178, 53, 53);
     font-family:Georgia, 'Times New Roman', Times, serif;

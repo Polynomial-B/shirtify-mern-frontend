@@ -12,12 +12,6 @@ export default function WishItem() {
     const [frontDesign, setFrontDesign] =useState('');
     const [size, setSize] = useState('')
 
-
-
-
-
-
-
 useEffect(()=> {
     async function fetchShirt() {
         try {
