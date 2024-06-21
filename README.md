@@ -54,10 +54,9 @@ We helped each other debug the code and fix any issues that arose.
 
 *******insert pic here of trello******
 
-# Technology Included
+# Components Included
 
 * Frontend Components:
-Design: Bulma (CSS library)
 Pages: Home, Login, Signup, Navbar
 Components: WishItem, Wishlist
 Main App: App.jsx
@@ -69,6 +68,8 @@ Database: MongoDB, seeded data, seed.js, helpers.js
 Custom Errors: customErrors.js
 Middleware: Error handling, secure routes
 Models: shirt.js, user.js
+
+# Technologies Included
 
 * Technologies:
 Frontend: HTML, CSS, JavaScript, React, Bulma (CSS library)

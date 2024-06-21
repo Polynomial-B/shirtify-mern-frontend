@@ -2,6 +2,7 @@ import {Link, useLocation} from "react-router-dom"
 import {useEffect, useState } from "react"
 import { toast } from "react-toastify"
 
+
 const Navbar = () => {
     const location = useLocation()
     const [isLoggedIn, setIsLoggedIn]= useState(localStorage.getItem('token'))

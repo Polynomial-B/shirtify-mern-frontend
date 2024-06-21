@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import '../../styles/Wishlist.css'
+import {baseUrl} from "../config"
 
 
 export default function Wishlist() {
@@ -14,7 +15,7 @@ export default function Wishlist() {
     async function fetchWishlist() {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("/api/wishlist", {
+        const response = await axios.get(`${baseUrl}/wishlist`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setWishlist(response.data);

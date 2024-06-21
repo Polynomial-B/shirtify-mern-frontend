@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import '../../styles/Browse.css'
 import { toast } from 'react-toastify'
 import axios from 'axios'
+import {baseUrl} from "../config"
 
 
 
@@ -25,7 +26,7 @@ export default function Browse () {
 
 useEffect(()=> {
     async function fetchShirts() {
-        const resp = await fetch('/api/shirts')
+        const resp = await fetch(`${baseUrl}/shirts`)
         const data = await resp.json()
         setShirts(data)
       }
@@ -53,7 +54,7 @@ useEffect(()=> {
           console.log(shirt)
           const token = localStorage.getItem("token");
     
-          const { data } = await axios.post("/api/shirts/browse", { shirt }, {
+          const { data } = await axios.post(`${baseUrl}/shirts/browse`, { shirt }, {
           headers: { Authorization: `Bearer ${token}` },
             
           });

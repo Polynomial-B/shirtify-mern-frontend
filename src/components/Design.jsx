@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import '../../styles/Design.css'
-
+import {baseUrl} from "../config"
 
 export default function Design() {
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ export default function Design() {
     try {
       const token = localStorage.getItem("token");
 
-      const { data } = await axios.post("/api/shirts/design", formData, {
+      const { data } = await axios.post(`${baseUrl}/shirts/design`, formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

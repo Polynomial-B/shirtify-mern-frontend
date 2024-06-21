@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, Link, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import {baseUrl} from "../config"
 
 
 export default function WishItem() {
@@ -28,7 +29,7 @@ useEffect(()=> {
     async function fetchShirt() {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get(`/api/wishlist/${wishId}`, {
+            const response = await axios.get(`${baseUrl}/wishlist/${wishId}`, {
               headers: { Authorization: `Bearer ${token}` }
             });
             setShirt(response.data);
@@ -47,7 +48,7 @@ useEffect(()=> {
 const handleDelete = async () => {
     try {
         const token =localStorage.getItem('token');
-        await axios.delete(`/api/wishlist/${wishId}`, {
+        await axios.delete(`${baseUrl}/wishlist/${wishId}`, {
             headers: { Authorization: `Bearer ${token}` }
           });
           toast.success('Shirt deleted sucessfully');
@@ -68,7 +69,7 @@ const handleSubmit = async (e) => {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`/api/shirts/${wishId}`, { color, frontDesign, size }, {
+      await axios.put(`${baseUrl}/shirts/${wishId}`, { color, frontDesign, size }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       toast.success('Shirt updated successfully');
