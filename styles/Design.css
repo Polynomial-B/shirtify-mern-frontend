@@ -1,35 +1,32 @@
 .t-shirt-container {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100%; /* Ensure the container does not exceed its parent's width */
-    height: auto; /* Allow the container height to adjust dynamically */
-    object-fit: contain; /* Ensure t-shirt image fits within the container */
-    pointer-events: none; /* Prevent overlay from affecting mouse events */
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .image-overlay-container {
-    position: absolute;
-    width: contain;
-    height: contain;
-    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
 }
 
 .image-overlay-container img {
-    width: 20vh;
+    width: 30%;
+    max-width: 150px;
+    max-height: 150px;
     height: auto;
-    display: block;
-    min-height: 0;
     object-fit: contain;
     pointer-events: none;
+    border-radius: 10px;
 }
-
-
 
 #White, #Black, #Red, #Green, #Purple, #Pink, #Blue, #Yellow, #Grey {
 background-repeat: no-repeat;
