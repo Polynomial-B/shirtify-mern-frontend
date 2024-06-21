@@ -28,7 +28,7 @@ export default function Wishlist() {
 
   return (
     <>
-      <h1 id="home-page-header" className="title is-1 has-text-weight-bold">Wishlist Page</h1>
+      <h1 id="home-page-header" className="title is-1 has-text-weight-bold">Your Wishlist</h1>
 
       <div className="section">
         <div className="columns is-multiline is-mobile">
