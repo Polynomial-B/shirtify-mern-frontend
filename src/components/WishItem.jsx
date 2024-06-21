@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
 
     return (
       <>
-        <h1>Edit Shirt</h1>
+        <h1 id="home-page-header" className="title is-1 has-text-weight-bold">Edit yout shirt!</h1>
         <div className="section">
           <div className="columns">
             <div className="column is-half">

@@ -55,6 +55,7 @@ export default function Design() {
 
   return (
     <>
+    <h1 id="home-page-header" className="title is-1 has-text-weight-bold">Design a shirt!</h1>
     <div className="section">
     <div className="columns">
     <div className="column is-half">

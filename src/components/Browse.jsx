@@ -70,7 +70,7 @@ useEffect(()=> {
         <>
           <div className="section">
             <div className="container">
-              <h1 className="title">Discover Your Look</h1>
+              <h1 className="title">Click to add to your Wishlist!</h1>
               <div className="controls">
                 <select
                   className="input"
