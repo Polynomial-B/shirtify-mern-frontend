@@ -1,5 +1,5 @@
 # Shirtify
-image here of the app
+![Shirtify Main Page](Images/mainpage.png)
 
 ## Project Overview
 Shirtify is a comprehensive web application designed to provide users with an interactive platform to browse, customize, and share a collection of shirts. <br />
@@ -20,8 +20,9 @@ The goal was to develop an engaging platform where users can express their uniqu
 
 ## Planning Process
 
-****insert pic here***
-****of exclidraw***
+![Planning Process using Excalidraw](Images/Planningprocess.png)
+![Planning Process using Trello ](Images/trello.png)
+
 
 ## Features
 1. User Authentication: Secure sign-up, login, and profile management.
@@ -30,18 +31,12 @@ The goal was to develop an engaging platform where users can express their uniqu
 4. Shirt Customization: Insert designs and select sizes for shirts.
 5. Community Sharing: Save customized shirts to the browse collection for others to discover.
 
-******insert pics  here*****
+![Login Page ](Images/loginpage.png)
 
-******Login page*****
+![Signup Page ](Images/signuppage.png)
 
+![Design a Shirt ](Images/designAShirt.png)
 
-******Sign in page*****
-
-
-******Design a shirt page*****
-
-
-*****Edit a shirt*****
 
 ## Challenges and Solutions
 * Challenge: Formulating the logic to manage the complex interactions and data flow between user wishlists and the browse collection.
@@ -52,7 +47,7 @@ to handle specific routes and middleware for secure routes and token-based authe
 This was a group pair project that went well. Communication was essential, as well as delegating tasks to each other.
 We helped each other debug the code and fix any issues that arose.
 
-*******insert pic here of trello******
+![Planning Process using Trello ](Images/Trelloplanning.jpeg)
 
 # Components Included
 
@@ -188,4 +183,39 @@ async function seed() {
 
 ```
 # Deployment
+
+
+
+This project is deployed using Netlify, leveraging GitHub integration for seamless updates. Here’s a detailed outline of the deployment process:
+
+* Deployment Setup
+Netlify Configuration:
+
+1. The project is hosted on Netlify to streamline deployment and hosting processes.
+Continuous deployment is enabled by linking the project directly to the GitHub repository.
+Environment Variables:
+
+2. For security reasons, sensitive information such as API keys or credentials are stored in environment variables.
+* These variables are managed using Netlify’s environment variable settings, ensuring they are securely stored and accessible only during deployment.
+
+3. Steps for Deployment
+Push to GitHub:
+
+* Any changes made to the project are first committed and pushed to the GitHub repository.
+Automatic Deployment:
+
+4. Netlify is configured to monitor the GitHub repository.
+* Upon detecting changes (commits or merges to the main branch), Netlify automatically triggers a new build and deployment process.
+
+5. Build Process:
+* During deployment, Netlify installs dependencies, compiles assets, and prepares the application for hosting.
+* Any environment variables configured on Netlify are injected during this build process.
+Hosting:
+
+6. Once the build process is complete, Netlify hosts the deployed application.
+* The application is accessible via a secure URL provided by Netlify.
+Local Development and Testing
+* For local development, ensure necessary environment variables are set in a .env file (not committed to GitHub) or configured in your local development environment.
+
+
 
