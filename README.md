@@ -2,15 +2,11 @@
 ![Shirtify Main Page](Images/mainpage.png)
 
 ## Project Overview
-Shirtify is a comprehensive web application designed to provide users with an interactive platform to browse, customize, and share a collection of shirts. <br />
-Users can sign up, create a profile, and log in to utilize the app's full functionality. <br />
-Upon logging in, users can explore an extensive collection of shirts, add shirts to their wishlist, and personalize shirts by inserting designs and selecting sizes. <br />
-The app supports full CRUD functionality for managing wishlists, enabling users to create, read, update, and delete shirt entries. <br />
-Customized shirts can be shared in the browse collection, allowing other users to add these shirts to their wishlists. <br />
+Shirtify is a comprehensive web application designed to provide users with an interactive platform to browse, customize, and share a collection of shirts.Users can sign up, create a profile, and log in to utilize the app's full functionality. Upon logging in, users can explore an extensive collection of shirts, add shirts to their wishlist, and personalize shirts by inserting designs and selecting sizes.The app supports full CRUD functionality for managing wishlists, enabling users to create, read, update, and delete shirt entries.Customized shirts can be shared in the browse collection, allowing other users to add these shirts to their wishlists. 
 
 ## Link to Shirtify
 
-****insert here****
+https://shirtify-wishlist.netlify.app
 
 ## Inspiration
 
@@ -21,6 +17,7 @@ The goal was to develop an engaging platform where users can express their uniqu
 ## Planning Process
 
 ![Planning Process using Excalidraw](Images/Planningprocess.png)
+
 ![Planning Process using Trello ](Images/trello.png)
 
 
