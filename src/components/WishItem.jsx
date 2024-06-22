@@ -87,12 +87,18 @@ const handleSubmit = async (e) => {
                   <div className="field">
                     <label className="label">Color</label>
                     <div className="control">
-                      <input
+                      <select
                         className="input"
                         type="text"
                         value={color}
                         onChange={(e) => setColor(e.target.value)}
-                      />
+                      >
+                      {formColors.map((color) => (
+                    <option key={color} value={color}>
+                      {color}
+                    </option>
+                  ))}
+                  </select>
                     </div>
                   </div>
                   <div className="field">

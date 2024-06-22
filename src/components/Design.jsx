@@ -112,7 +112,7 @@ export default function Design() {
             </div>
 
             <button className="button" type="submit">
-              Create Shirt
+              Add to wishlist
             </button>
           </form>
         </div>
