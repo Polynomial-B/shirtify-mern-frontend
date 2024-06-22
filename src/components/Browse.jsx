@@ -4,7 +4,7 @@ import '../../styles/Browse.css'
 import { toast } from 'react-toastify'
 import axios from 'axios'
 import {baseUrl} from "../config"
-
+import formColors from '../data/shirtColours'
 
 
 export default function Browse () {
@@ -12,17 +12,6 @@ export default function Browse () {
     const [shirtFilter, setShirtFilter]= useState('')
     const [selectedColor, setSelectedColor]= useState('')
 
-    const formColors = [
-      "White",
-      "Black",
-      "Red",
-      "Green",
-      "Grey",
-      "Purple",
-      "Pink",
-      "Blue",
-      "Yellow"
-    ];
 
 useEffect(()=> {
     async function fetchShirts() {

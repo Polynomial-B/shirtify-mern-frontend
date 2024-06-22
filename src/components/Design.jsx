@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import '../../styles/Design.css'
 import {baseUrl} from "../config"
+import formColors from '../data/shirtColours'
 
 export default function Design() {
   const navigate = useNavigate();
@@ -15,17 +16,6 @@ export default function Design() {
 
   const [color, setColor] = useState("");
 
-  const formColors = [
-    "White",
-    "Black",
-    "Red",
-    "Green",
-    "Grey",
-    "Purple",
-    "Pink",
-    "Blue",
-    "Yellow"
-  ];
   const formSizes = ["S", "M", "L"];
 
     

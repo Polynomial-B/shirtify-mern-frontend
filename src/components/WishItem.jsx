@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate, Link, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import {baseUrl} from "../config"
-
+import formColors from '../data/shirtColours'
 
 export default function WishItem() {
     const { wishId } = useParams();
@@ -13,17 +13,6 @@ export default function WishItem() {
     const [frontDesign, setFrontDesign] =useState('');
     const [size, setSize] = useState('')
 
-    const formColors = [
-      "White",
-      "Black",
-      "Red",
-      "Green",
-      "Grey",
-      "Purple",
-      "Pink",
-      "Blue",
-      "Yellow"
-    ];
 
 useEffect(()=> {
     async function fetchShirt() {
