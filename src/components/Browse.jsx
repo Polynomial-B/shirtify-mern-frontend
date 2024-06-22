@@ -59,7 +59,7 @@ useEffect(()=> {
         <>
               <h1 className="title">Click to add to your Wishlist!</h1>
           <div className="section">
-            <div className="container">
+            <div className="container" >
               <div className="controls">
                 <select
                   className="input"
@@ -76,7 +76,7 @@ useEffect(()=> {
                 </select>
                 <button className="button is-danger" onClick={handleReset}>Reset</button>
               </div>
-              <div className="browse-columns columns is-multiline is-mobile">
+              <div className="browse-columns columns is-multiline is-mobile" id="browse-container">
                 {filterShirts().map((shirt, index) => {
                   return (
                     <div
