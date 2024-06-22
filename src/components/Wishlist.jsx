@@ -30,6 +30,8 @@ export default function Wishlist() {
     <>
       <h1 id="home-page-header" className="title is-1 has-text-weight-bold">Your Wishlist</h1>
 
+      {wishlist.length === 0 ? <p className="title is-1 has-text-weight-light"> <Link to="/shirts/browse">Browse</Link> a shirt or <Link to="/shirts/design" >design</Link> one!</p> : null}
+
       <div className="section">
         <div className="columns is-multiline is-mobile">
           {wishlist.map((wish, index) => {

@@ -79,11 +79,6 @@ const handleSubmit = async (e) => {
     }
   };
 
-    
-    if(!shirt) {
-        return <p> Choose a shirt or design one!</p>
-    }
-
     return (
       <>
         <h1 id="home-page-header" className="title is-1 has-text-weight-bold">Edit yout shirt!</h1>
