@@ -35,3 +35,14 @@
 .card.selected {
     transform: scale(1.05);
 }
+
+div.controls{
+    width: 400px;
+    display: flex;
+    align-self: center;
+}
+
+.select.input {
+    background-color: red;
+    border: 2px solid red;
+}

@@ -29,11 +29,10 @@
 
 .label {
     font-size: 1.2rem;
-    color: #5f0404;
+    color: #d15d5d;
 }
 
 .input {
-    padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;

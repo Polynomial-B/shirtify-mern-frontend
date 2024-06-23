@@ -1,69 +1,76 @@
+
 .t-shirt-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    width: 300px;
-    height: 100px;
-    border-radius: 8px;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .image-overlay-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .image-overlay-container img {
-    width: 30%;
-    max-width: 150px;
-    max-height: 150px;
-    height: auto;
-    object-fit: contain;
-    pointer-events: none;
-    border-radius: 10px;
+  width: 30%;
+  max-width: 150px;
+  max-height: 150px;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  border-radius: 10px;
 }
 
-#White, #Black, #Red, #Green, #Purple, #Pink, #Blue, #Yellow, #Grey {
-background-repeat: no-repeat;
-background-size: contain;
-background-position: center;
-z-index: 0;
-position: relative;
-max-width: 300px;
-max-height: 300px;
+#White,
+#Black,
+#Red,
+#Green,
+#Purple,
+#Pink,
+#Blue,
+#Yellow,
+#Grey {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 0;
+  position: relative;
+  max-width: 300px;
+  max-height: 300px;
+  user-select: none;
 }
 
 #White {
-    background-image: url('../assets/white-t-shirt.png');
+  background-image: url("../assets/white-t-shirt.png");
 }
 #Black {
-    background-image: url('../assets/black-t-shirt.png');
-    background-color: rgba(152, 152, 152, 0.322);
-    border-radius: 10px;
+  background-image: url("../assets/black-t-shirt.png");
+  background-color: rgba(152, 152, 152, 0.322);
+  border-radius: 10px;
 }
 #Red {
-    background-image: url('../assets/red-t-shirt.png');
+  background-image: url("../assets/red-t-shirt.png");
 }
 #Green {
-    background-image: url('../assets/green-t-shirt.png');
+  background-image: url("../assets/green-t-shirt.png");
 }
 #Grey {
-    background-image: url('../assets/grey-t-shirt.png');
+  background-image: url("../assets/grey-t-shirt.png");
 }
 #Purple {
-    background-image: url('../assets/purple-t-shirt.png');
+  background-image: url("../assets/purple-t-shirt.png");
 }
 #Pink {
-    background-image: url('../assets/pink-t-shirt.png');
+  background-image: url("../assets/pink-t-shirt.png");
 }
 #Blue {
-    background-image: url('../assets/blue-t-shirt.png');
+  background-image: url("../assets/blue-t-shirt.png");
 }
 #Yellow {
-    background-image: url('../assets/yellow-t-shirt.png');
+  background-image: url("../assets/yellow-t-shirt.png");
 }
