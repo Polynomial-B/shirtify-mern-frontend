@@ -81,7 +81,7 @@ useEffect(()=> {
                   return (
                     <div
                       onClick={()=> handleAddToWishlist(shirt)}
-                      className="browse-column column is-one-third-desktop is-half-tablet is-half-mobile"
+                      className="browse-column column"
                       key={index}
                     >
                      
