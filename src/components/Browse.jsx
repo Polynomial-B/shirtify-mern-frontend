@@ -67,7 +67,7 @@ useEffect(()=> {
                   onChange={(event) => setSelectedColor(event.target.value)}
                   value={shirtFilter}
                 >
-                  <option value="">Select Color</option>
+                  <option value="">{selectedColor === "" ? "Select Color" : selectedColor}</option>
                   {formColors.map((color) => (
                     <option key={color} value={color}>
                       {color}
