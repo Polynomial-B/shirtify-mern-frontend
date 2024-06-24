@@ -68,3 +68,10 @@ position: relative;
     background-image: url('../assets/yellow-t-shirt.png');
 }
 
+.wish-link a {
+    color: rgb(47, 102, 255);
+}
+
+a:hover {
+    text-decoration: underline;
+}
