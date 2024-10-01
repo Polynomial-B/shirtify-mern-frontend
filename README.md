@@ -13,7 +13,7 @@
 
 ### Project Members
 - Matt Lamb
-- Jasmine Leger [https://github.com/Jasleger88]
+- [Jasmine Leger](https://github.com/Jasleger88)
 
 ### Timeframe
 - 7 Days
@@ -30,7 +30,7 @@ We wanted to create an application that allowed users to customise t-shirt desig
 
 ### Deployed Version
 
-The app is deployed [here](link-to-deployed-app).
+[Click here to visit Shirtify](https://shirtify-wishlist.netlify.app/).
 
 ### Technologies and Dependencies
 #### Frontend
@@ -102,11 +102,12 @@ We built the backend using:
 ## Bugs, Wins and Challenges
 
 ### Wins
-##### Paired Project
+#### Paired Project
 I loved the experience of building an app with somebody else. Because of our careful planning we were able to manage our time effectively. We did this through creating timeframes and by time-boxing extra features.
 
-##### JSON Web Tokens
-It was satisfying to successfully implement using JWT for authentication in a build. 
+#### JSON Web Tokens
+It was satisfying to successfully implement using JWT for authentication in a build.
+
 ### Bugs
 There are no known bugs at this point.
 
